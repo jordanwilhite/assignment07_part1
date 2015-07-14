@@ -37,7 +37,23 @@ function currencyCode(items){
 
 answer3.innerHTML = currencyCode(items)
 
+function madeOfWood(items){
+
+  return (item.materials)
+
+}
 
 answer4.innerHTML =
 answer5.innerHTML =
-answer6.innerHTML =
+
+
+
+
+function
+
+
+
+var sellers = items.filter(function(items){
+  return item.who_made === "i_did";
+});
+answer6.innerHTML = sellers.length + "are made by their sellers"
