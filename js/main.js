@@ -10,8 +10,8 @@ function getAvg(items){
     return item.price;
   })
 //Above function grabs all of the items.js prices and returns them.
-  var sum = prices.reduce(function(total, val){
-    return total + val;
+  var sum = prices.reduce(function(total){
+    return total;
   });
 //
     return sum / items.length;
