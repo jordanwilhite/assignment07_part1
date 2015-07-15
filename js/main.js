@@ -9,22 +9,23 @@ function getAvg(items){
   var prices = items.map(function(item){
     return item.price;
   })
-//Above function grabs all of the items.js prices and returns them.
+
   var sum = prices.reduce(function(total){
     return total;
   });
-//
+
     return sum / items.length;
 };
 
 answer1.innerHTML = getAvg(items).toFixed(2);
 
 function priceRange(items) {
-  if (items.price > 14 && items < 18);
+  if (items.price > 14 && items.price < 18);
   .map(function(price) {
     return price.title;
   });
-}
+};
+
 answer2.innerHTML = priceRange(items)
 
 function currencyCode(items){
@@ -32,28 +33,41 @@ function currencyCode(items){
   .map(function(items){
     return items.title
   });
-
 };
 
 answer3.innerHTML = currencyCode(items)
 
-function madeOfWood(items){
-
-  return (item.materials)
 
 }
+ var wood = items.filter(function(item){
+  return item.materials.indexOf('wood') !== -1;
+   })
+   return '<li>' +item.title + item.price + '</li>';
+   return hasWood.length;
+}).reduce(function(html, item){
 
-answer4.innerHTML =
-answer5.innerHTML =
+   return html + item;
+})
 
+answer4.innerHTML = wood;
 
+function eight(items, materialsLength){
+  return items.filter(function(item){
+    return item.materials.length >= materialsLength;
+  }).map(function(item){
 
+    return '<li>' + item.title + item.materials + '. This item is made of ' + item.materials.length + " materials" +'</li>';
+  }).reduce(function(html, item){
 
-function
+    return html + item;
+  });
+};
 
+ans5.innerHTML = eight(items, 8);
 
 
 var sellers = items.filter(function(items){
   return item.who_made === "i_did";
 });
+
 answer6.innerHTML = sellers.length + "are made by their sellers"
