@@ -51,10 +51,21 @@ answer3.innerHTML = currencyCode(items)
 
 answer4.innerHTML = wood;
 
-function eight(items){
+var eight = items.filter(function(item){
+  return item.materials.length >= 8;
+});
+  map(function(item){
+    var materials = item.materials.map(function(materials){
+      return '<li>' + material + '</li>';
+    }).reduce(function(html, item){
+      return html + item;
+    });
+    return '<li>' + item.title + 'has ' item.materials.length + 'materials ' + '<ul>' + materials + '</ul></li>';
+    return html + item;
 
+  });
 
-ans5.innerHTML = eight(items);
+ans5.innerHTML = (eight);
 
 
 var sellers = items.filter(function(items){
